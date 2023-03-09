@@ -65,7 +65,6 @@ export const Skills = () => {
           </Col>
         </Row>
       </Container>
-
     </section>
   );
 };
