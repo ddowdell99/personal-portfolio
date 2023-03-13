@@ -4,6 +4,8 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { HashLink } from "react-router-hash-link";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export const Banner = () => {
   const [loopNumber, setLoopNumber] = useState(100);
@@ -53,6 +55,7 @@ export const Banner = () => {
   };
 
   return (
+    <Router>
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
@@ -71,9 +74,11 @@ export const Banner = () => {
                   illo molestiae, quam quae recusandae hic sunt? Quo vero quae
                   ratione delectus ab!
                 </p>
-                <button onClick={() => console.log("connect")}>
+                <HashLink to="#connect">
+                <button>
                   Let's Connect <ArrowRightCircle size={25} />
                 </button>
+                </HashLink>
               </div>}
             </TrackVisibility>
           </Col>
@@ -83,5 +88,6 @@ export const Banner = () => {
         </Row>
       </Container>
     </section>
+    </Router>
   );
 };
